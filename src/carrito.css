@@ -1,0 +1,143 @@
+.carrito-container {
+  position: fixed;
+  top: 100px; /* debajo del header en desktop */
+  left: 100px; 
+  width: 300px;
+  max-width: 90vw;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 250;
+  font-family: sans-serif;
+}
+
+/* Título */
+.carrito-container h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* Item del carrito */
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Control de cantidad */
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cantidad-control button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cantidad-control button:hover {
+  background: #333;
+}
+
+.cantidad-control span {
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Total */
+.total {
+  text-align: right;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Botones */
+.btn-finalizar, .btn-enviar {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-finalizar:hover, .btn-enviar:hover {
+  background-color: #333;
+}
+
+/* Formulario */
+.formulario-compra input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ---------------- Responsive ---------------- */
+
+/* Celulares pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  .carrito-container {
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 10px;
+    width: 95%;
+    max-height: 70vh; /* evita que ocupe toda la pantalla */
+    overflow-y: auto; /* scroll interno si es muy largo */
+    padding: 15px;
+  }
+
+  .cantidad-control button { 
+    width: 30px; 
+    height: 30px; 
+  }
+
+  .total { font-size: 14px; }
+}
+
+/* Tablets (481px a 768px) */
+@media (max-width: 768px) {
+  .carrito-container {
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 20px;
+    width: 85%;
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+
+  .cantidad-control button { 
+    width: 28px; 
+    height: 28px; 
+  }
+}
+
+/* Laptops y PCs (más de 1024px) */
+@media (min-width: 1024px) {
+  .carrito-container {
+    top: 100px;
+    left: auto;
+    right: 40px; /* se acomoda cerca del ícono */
+    width: 350px;
+  }
+}
