@@ -11,8 +11,8 @@ const Carrito = () => {
 
   const enviarPedido = () => {
     const detalle = cart.map(p => `${p.nombre} x${p.qty} = $${p.precio * p.qty}`).join("%0A");
-    const mensaje = `*Nuevo Pedido*%0A${detalle}%0A%0ANombre: ${form.nombre}%0AApellido: ${form.apellido}%0ADirección: ${form.direccion}%0ATotal: $${total}`;
-    const numero = "5493813670162";
+    const mensaje = `🛍*Nuevo Pedido*🛍%0A${detalle}%0A%0ANombre: ${form.nombre}%0AApellido: ${form.apellido}%0ADirección: ${form.direccion}%0ATotal: $${total}`;
+    const numero = "5493814132640";
     window.open(`https://wa.me/${numero}?text=${mensaje}`, "_blank");
     vaciarCarrito();
     setForm({ nombre:"", apellido:"", direccion:"" });

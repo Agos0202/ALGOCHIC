@@ -77,13 +77,14 @@
   display: grid; 
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
   gap: 20px; 
-  margin-top: 20px; 
+  margin-top: 0.5px; 
 }
 
 .card { 
   background: #fff; 
   border-radius: 10px; 
-  padding: 15px; 
+  padding: 1px; 
+  font-size: 22px;
   text-align: center; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
@@ -95,7 +96,7 @@
 }
 .card button { 
   margin: 5px; 
-  padding: 6px 12px; 
+  padding: 4px 8px; 
   border: none; 
   border-radius: 6px; 
   cursor: pointer; 

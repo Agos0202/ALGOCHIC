@@ -2,7 +2,7 @@
   position: fixed;
   top: 100px; /* debajo del header en desktop */
   left: 100px; 
-  width: 300px;
+  width: 500px;
   max-width: 90vw;
   background: #fff;
   padding: 20px;
@@ -17,6 +17,7 @@
   text-align: center;
   margin-bottom: 15px;
   color: #000;
+  font-size: 20px;
 }
 
 /* Item del carrito */
@@ -86,7 +87,7 @@
 .formulario-compra input {
   width: 100%;
   padding: 8px 10px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
