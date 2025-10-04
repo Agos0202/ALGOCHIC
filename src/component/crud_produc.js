@@ -28,7 +28,7 @@ const Productos = () => {
 
   const productosRef = collection(db, "productos");
 
-  // ✅ usamos useCallback para que React no se queje
+  
   const obtenerProductos = useCallback(async () => {
     const q = query(productosRef, orderBy("fecha", "desc"));
     const snapshot = await getDocs(q);
@@ -108,12 +108,12 @@ const Productos = () => {
 
       <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
         <ul>
-          <li onClick={() => seleccionarFiltro("todos")}>Todos</li>
-          <li onClick={() => seleccionarFiltro("pulseras")}>Pulseras</li>
-          <li onClick={() => seleccionarFiltro("aros")}>Aros</li>
-          <li onClick={() => seleccionarFiltro("cadenas")}>Cadenas</li>
-          <li onClick={() => seleccionarFiltro("anillos")}>Anillos</li>
-          <li onClick={() => seleccionarFiltro("otros")}>Otros</li>
+          <li onClick={() => seleccionarFiltro("todos")}>TODO</li>
+          <li onClick={() => seleccionarFiltro("pulseras")}>PULSERAS</li>
+          <li onClick={() => seleccionarFiltro("aros")}>AROS</li>
+          <li onClick={() => seleccionarFiltro("cadenas")}>CADENAS</li>
+          <li onClick={() => seleccionarFiltro("anillos")}>ANILLOS</li>
+          <li onClick={() => seleccionarFiltro("otros")}>OTROS</li>
         </ul>
       </div>
 
@@ -161,10 +161,10 @@ const Productos = () => {
 
           {editando ? (
             <button onClick={() => actualizarProducto(editando)}>
-              Actualizar
+              ACTUALIZAR
             </button>
           ) : (
-            <button onClick={agregarProducto}>Agregar</button>
+            <button onClick={agregarProducto}>AGREGAR</button>
           )}
         </div>
 

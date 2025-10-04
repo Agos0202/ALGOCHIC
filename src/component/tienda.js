@@ -35,12 +35,12 @@ const Tienda = () => {
       {sidebarOpen && <div className="overlay" onClick={() => setSidebarOpen(false)}></div>}
       <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
         <ul>
-          <li onClick={() => seleccionarFiltro("todo")}>Todos</li>
-          <li onClick={() => seleccionarFiltro("pulseras")}>Pulseras</li>
-          <li onClick={() => seleccionarFiltro("aros")}>Aros</li>
-          <li onClick={() => seleccionarFiltro("cadenas")}>Cadenas</li>
-          <li onClick={() => seleccionarFiltro("anillos")}>Anillos</li>
-          <li onClick={() => seleccionarFiltro("otros")}>Otros</li>
+          <li onClick={() => seleccionarFiltro("todo")}>TODOS</li>
+          <li onClick={() => seleccionarFiltro("pulseras")}>PULSERAS</li>
+          <li onClick={() => seleccionarFiltro("aros")}>AROS</li>
+          <li onClick={() => seleccionarFiltro("cadenas")}>CADENAS</li>
+          <li onClick={() => seleccionarFiltro("anillos")}>ANILLOS</li>
+          <li onClick={() => seleccionarFiltro("otros")}>OTROS</li>
         </ul>
       </div>
 
@@ -62,7 +62,7 @@ const Tienda = () => {
                     <button onClick={() => cambiarCantidad(p.id, itemEnCarrito.qty + 1)}>+</button>
                   </div>
                 ) : (
-                  <button className="btn-agregar" onClick={() => agregarProducto(p)}>Agregar</button>
+                  <button className="btn-aggprod" onClick={() => agregarProducto(p)}>AGREGAR</button>
                 )}
               </div>
             );

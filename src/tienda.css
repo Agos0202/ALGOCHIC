@@ -1,8 +1,27 @@
+/* ---------------- Contenedor principal ---------------- */
 .tienda-container { 
   display: flex; 
   flex-direction: column; 
   align-items: center; 
   padding-top: 20px; 
+}
+
+/* Botón agregar producto */
+.btn-aggprod {
+  background-color: #fff;   /* fondo blanco */
+  color: #000;              /* texto negro */
+  font-size: 18px;          /* letra más grande */
+  font-weight: bold;        
+  padding: 10px 20px;       
+  border-radius: 8px;
+  border: 1px solid #000;   
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-aggprod:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 /* ---------------- Sidebar ---------------- */
@@ -11,8 +30,8 @@
   top: 20px; 
   left: 20px; 
   z-index: 200;
-  width: 35px; 
-  height: 30px; 
+  width: 60px; 
+  height: 60px; 
   display: flex; 
   flex-direction: column; 
   justify-content: space-between;
@@ -104,20 +123,30 @@
   color: #fff; 
 }
 
+/* ---------------- Control de cantidad ---------------- */
 .cantidad-control { 
   display: flex; 
   justify-content: center; 
   align-items: center; 
   gap: 5px; 
 }
+
 .cantidad-control button { 
-  width: 25px; 
-  height: 25px; 
-  background: #333; 
-  color: #fff; 
-  border-radius: 4px; 
-  border:none; 
-  cursor:pointer; 
+  width: 40px;           /* más grande */
+  height: 40px;
+  font-size: 18px;       /* letra más grande */
+  font-weight: bold;
+  background: #fff;      /* fondo blanco */
+  color: #000;           /* texto negro */
+  border: 1px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cantidad-control button:hover {
+  background: #000;
+  color: #fff;
 }
 
 /* ---------------- Responsive ---------------- */
@@ -143,8 +172,14 @@
   }
 
   .cantidad-control button {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .btn-aggprod {
+    font-size: 16px;
+    padding: 8px 16px;
   }
 }
 

@@ -6,7 +6,7 @@ import Productos from "./component/crud_produc";
 import Login from "./component/login";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { app } from "./component/firebase"; 
-import bolsa from "./bolsa.png"; 
+
 import "./App.css";
 import "./login.css";
 
@@ -34,9 +34,7 @@ function App() {
         <h1>ALGO CHIC</h1>
       </header>
 
-      <div className="carrito-icono">
-        <img src={bolsa} alt="Carrito" />
-      </div>
+      
 
       <main className="contenido">
         <CartProvider>
