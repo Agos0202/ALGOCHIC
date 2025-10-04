@@ -8,9 +8,9 @@
 
 /* Botón agregar producto */
 .btn-aggprod {
-  background-color: #fff;   /* fondo blanco */
-  color: #000;              /* texto negro */
-  font-size: 18px;          /* letra más grande */
+  background-color: #fff;   
+  color: #000;              
+  font-size: 18px;          
   font-weight: bold;        
   padding: 10px 20px;       
   border-radius: 8px;
@@ -24,11 +24,11 @@
   color: #fff;
 }
 
-/* ---------------- Sidebar ---------------- */
+/* ---------------- Botón menú ---------------- */
 .menu-btn {
   position: fixed; 
   top: 20px; 
-  left: 20px; 
+  right: 20px; /* a la derecha */
   z-index: 200;
   width: 60px; 
   height: 60px; 
@@ -49,10 +49,17 @@
   transition: all 0.3s ease; 
 }
 
-.menu-btn.open span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
-.menu-btn.open span:nth-child(2) { opacity: 0; }
-.menu-btn.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+.menu-btn.open span:nth-child(1) { 
+  transform: rotate(45deg) translate(7px, 7px); 
+}
+.menu-btn.open span:nth-child(2) { 
+  opacity: 0; 
+}
+.menu-btn.open span:nth-child(3) { 
+  transform: rotate(-45deg) translate(7px, -7px); 
+}
 
+/* Overlay */
 .overlay { 
   position: fixed; 
   top:0; left:0; 
@@ -62,6 +69,7 @@
   z-index: 120; 
 }
 
+/* Sidebar */
 .sidebar { 
   position: fixed; 
   top: 0; 
@@ -91,7 +99,7 @@
   transition: 0.3s; 
 }
 
-/* ---------------- Grid productos ---------------- */
+/* Grid productos */
 .grid { 
   display: grid; 
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
@@ -123,7 +131,7 @@
   color: #fff; 
 }
 
-/* ---------------- Control de cantidad ---------------- */
+/* Control de cantidad */
 .cantidad-control { 
   display: flex; 
   justify-content: center; 
@@ -132,12 +140,12 @@
 }
 
 .cantidad-control button { 
-  width: 40px;           /* más grande */
+  width: 40px; 
   height: 40px;
-  font-size: 18px;       /* letra más grande */
+  font-size: 18px; 
   font-weight: bold;
-  background: #fff;      /* fondo blanco */
-  color: #000;           /* texto negro */
+  background: #fff; 
+  color: #000; 
   border: 1px solid #000;
   border-radius: 6px;
   cursor: pointer;
@@ -154,16 +162,26 @@
 /* Celulares pequeños */
 @media (max-width: 480px) {
   .menu-btn {
+    width: 50px;
+    height: 50px;
     top: 15px;
-    left: 15px;
+    right: 15px; 
   }
 
-  .sidebar {
-    width: 100%;
+  .menu-btn span {
+    height: 5px; 
+    border-radius: 3px;
+  }
+
+  .menu-btn.open span:nth-child(1) { 
+    transform: rotate(45deg) translate(8px, 8px); 
+  }
+  .menu-btn.open span:nth-child(3) { 
+    transform: rotate(-45deg) translate(8px, -8px); 
   }
 
   .grid {
-    grid-template-columns: 1fr; /* 1 columna */
+    grid-template-columns: 1fr; 
     gap: 10px;
   }
 
@@ -186,11 +204,11 @@
 /* Tablets */
 @media (max-width: 768px) {
   .sidebar {
-    width: 70%; /* sidebar ocupa 70% */
+    width: 70%; 
   }
 
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 15px;
   }
 }
@@ -198,6 +216,6 @@
 /* Laptops / PCs grandes */
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
