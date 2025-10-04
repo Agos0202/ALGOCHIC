@@ -30,7 +30,7 @@
   top: 20px; 
   right: 20px; /* a la derecha */
   z-index: 200;
-  width: 60px; 
+  width: 75px; 
   height: 60px; 
   display: flex; 
   flex-direction: column; 
@@ -47,6 +47,8 @@
   background: #000; 
   border-radius: 2px; 
   transition: all 0.3s ease; 
+  width: 75px;
+  height: 60px;
 }
 
 .menu-btn.open span:nth-child(1) { 
@@ -91,12 +93,13 @@
   cursor: pointer; 
   font-weight: bold; 
   border-bottom: 1px solid #ddd; 
+  
 }
 .sidebar li:hover { 
   color: #fff; 
   background: #000; 
   padding-left: 10px; 
-  transition: 0.3s; 
+  transition: 0.3s;
 }
 
 /* Grid productos */
