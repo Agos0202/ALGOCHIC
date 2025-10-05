@@ -54,10 +54,10 @@ const Carrito = () => {
 
       {/* Sidebar del carrito */}
       <div className={`carrito-sidebar ${sidebarAbierto ? "open" : ""}`}>
-        <h3>MI PEDIDO</h3>
+        <h3 className="carrito-text">MI PEDIDO</h3>
 
         {cart.length === 0 ? (
-          <p style={{ textAlign: "center", marginTop: "20px" }}>
+          <p style={{ textAlign: "center", marginTop: "20px", fontSize:"30px" }}>
             No hay productos agregados aún.
           </p>
         ) : (
@@ -85,7 +85,7 @@ const Carrito = () => {
               </button>
             ) : (
               <div className="formulario-compra">
-                <h3>DATOS DEL CLIENTE</h3>
+                <h3 className="carrito-text">DATOS DEL CLIENTE</h3>
                 <input
                   placeholder="Nombre"
                   value={form.nombre}
@@ -119,6 +119,7 @@ const Carrito = () => {
             background: "#ccc",
             borderRadius: "6px",
             cursor: "pointer",
+            fontSize:"20px"
           }}
           onClick={() => setSidebarAbierto(false)}
         >

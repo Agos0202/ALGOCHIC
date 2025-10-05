@@ -2,7 +2,7 @@
 .container {
   display: flex;
   min-height: 100vh;
-  flex-direction: column; /* En móviles, apila */
+  flex-direction: column; 
 }
 
 /* ------------------ Botón hamburguesa ------------------ */
@@ -65,8 +65,8 @@
   left: 0;
   width: 250px;
   height: 100%;
-  background: #000000;
-  color: #ffffff;
+  background: #fff;
+  color: #000;
   padding: 20px;
   transition: transform 0.3s ease;
   transform: translateX(-100%);
@@ -93,8 +93,8 @@
 }
 
 .sidebar li:hover {
-  color: #000000;
-  background: #ffffff;
+  color: #ffffff;
+  background: #000;
   padding-left: 10px;
   transition: 0.3s;
 }
@@ -163,14 +163,16 @@
 }
 
 .card button:first-of-type {
-  background: #00bcd4;
-  color: white;
+  background: #fff;
+  color: #000;
 }
 
 .card button:last-of-type {
-  background: #f44336;
-  color: white;
+  background: #ffffff;
+  color: #000;
 }
+
+
 
 /* ------------------ Footer ------------------ */
 footer {
