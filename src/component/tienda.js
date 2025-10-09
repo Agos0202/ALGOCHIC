@@ -12,7 +12,7 @@ const Tienda = () => {
   const { agregarProducto, cart, cambiarCantidad } = useCart();
 
   const obtenerProductos = async () => {
-    const q = query(collection(db, "productos"), orderBy("fecha", "desc"), limit(60));
+    const q = query(collection(db, "productos"), orderBy("fecha", "desc"), limit(6000));
     const snapshot = await getDocs(q);
     setProductos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
   };
